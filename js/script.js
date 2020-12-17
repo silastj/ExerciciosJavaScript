@@ -61,3 +61,47 @@ cpfKeyUp1.addEventListener('keyup', ()=> {
     const cpf1 = document.querySelector('#cpf1').value
     span.innerHTML = cpf1
 })
+//(10) No HTML Crie:
+//2 x - Campo/Input do tipo text. (id=soma1, id=soma2)
+//1 x - Botão (id=btn-soma)
+//1 x - Campo (id=resultado-soma)
+//Caso esteja preenchido um valor númerico nos dois campos(id=soma1, id=soma2), 
+//O resultado da soma devera aparecer no campo (id=resultado-soma) ao clicar no botão (id=btn-soma).
+const inputc = document.querySelector('#input10c')
+const resultado10 = document.querySelector('#res10')
+inputc.addEventListener('click', ()=> {
+    const input10a = parseInt(document.querySelector('#input10a').value)
+    const input10b = parseInt(document.querySelector('#input10b').value)
+    resultado10.innerHTML = (`Resultado da soma :${input10a + input10b}`)
+})
+//(12) Faça um comentário de uma linha no JavaScript no exercicio anterior
+//Comentario na linha anterior
+
+//(12.a) Crie dois botões no HTML chamados: 'Verde', ,'Vermelho'. ao clicar neles, 
+//o style="background-color: {COR-SELECIONADA}" vai ser alterado dinamicamente Alterar-Style de uma div
+
+const btndoze = document.querySelector('#btn12a')
+const btndoze1 = document.querySelector('#btn12a1')
+const div12 = document.querySelector('#div12')
+btndoze.addEventListener('click', ()=> {
+    div12.style.backgroundColor = 'green' 
+})
+btndoze1.addEventListener('click', ()=> {
+    div12.style.backgroundColor = 'yellow'
+})
+//(13) Faça um comentário de varias linhas no JavaScript no exercicio anterior do CPF.
+//(14) Crie uma div vazia cujo o id dela é 'resultado' Insira via JavaScript assim que a tela carregar o seguinte texto: 'Esse texto foi inserido pelo JavaScript...'
+function iniciar(){
+    const divresultado14 = document.querySelector('#resultado14')
+    divresultado14.innerHTML = 'Novo'
+}
+window.onload = function() {
+    //iniciar()
+}
+//(15) Agora crie um botão que ao ser clicado faça a mesma ação do exercício anterior.
+const aquinze = document.querySelector('#btn151')
+aquinze.addEventListener('click', iniciara) 
+function iniciara(){
+    const divresultado14 = document.querySelector('#resultado14')
+    divresultado14.innerHTML = 'Novo'
+}
