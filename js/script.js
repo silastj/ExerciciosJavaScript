@@ -105,3 +105,48 @@ function iniciara(){
     const divresultado14 = document.querySelector('#resultado14')
     divresultado14.innerHTML = 'Novo'
 }
+//(16)Crie uma função que recebe 2 parâmetros e retorna a soma deles. (e utilize no exercicio 10)
+function ssSomar(dadoUm, dadoDois){
+    return dadoUm + dadoDois
+}
+console.log(ssSomar(10,20))
+//(17) Crie uma função que recebe 2 parâmetros e retorna a soma deles, porem caso seja passado um parâmetro vazio ela retorne zero.
+function ssZero(numeroUm, numeroDois){
+    if(numeroUm == undefined || numeroDois == undefined) return 0;
+    return numeroUm + numeroDois
+}
+console.log(ssZero(10))
+//(18) Exiba o 'resto' da seguinte divisão: (5 / 2)
+const resto = function(aa, bb){
+    return aa / bb
+}
+console.log(`Resto: ${resto(5,2)}`)
+//(19) Crie uma função que retorna a palavra (impar/par) de acordo com seu parâmetro inteiro.
+function impaPar(impar){
+    if(impar % 2 === 0) return 'Par';return'Impar'
+}
+console.log(impaPar(-1))
+//(20) Crie uma função que recebe 2 parâmetros e retorna a multiplicação deles.
+function multiplicacao(nn,mm){
+    return nn * mm
+}
+console.log(multiplicacao(2,2))
+//(21) Crie uma função que calcula 5% de desconto retornando o valor do desconto.
+const dd = 5
+const vv = 10 
+function desconto(vv){
+    return vv - ((vv * dd) / 100)
+}
+console.log('O valor inicial ' + vv + ' tem um valor total de desconto é : ' + desconto(vv)) 
+//(22) Crie uma função que recebe o ano de nascimento da pessoa informando se ela é maior de idade ou menor.
+const dataAtual = new Date().toLocaleDateString() //data completa
+const anoR = (dataAtual.substring(6,10)) //ano
+const mesR = (dataAtual.substring(3,5)) //mes
+const verificado = 18
+const totalatual = (anoR - verificado);
+const inputValue = document.querySelector('#datevinteDois').addEventListener('change', click)
+const resultadoDate = document.querySelector('.datevinteDois')
+function click(){
+    const datevinte = document.querySelector('#datevinteDois').value
+    if(datevinte.substring(0,4) <= totalatual )return resultadoDate.innerHTML ="Maior de idade";return resultadoDate.innerHTML = "Menor de idade"
+}
