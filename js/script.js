@@ -150,3 +150,42 @@ function click(){
     const datevinte = document.querySelector('#datevinteDois').value
     if(datevinte.substring(0,4) <= totalatual )return resultadoDate.innerHTML ="Maior de idade";return resultadoDate.innerHTML = "Menor de idade"
 }
+//(23) Dentro da div com o id 'resultado', escreva 1x ('Repetição'). @dica 'innerHTML', el.innerHTML = 'Repetição';
+const vintetres = document.querySelector('.vinteTres p')
+const ppVinteTres = document.createElement('p')
+const ppVinteTresNome = document.createTextNode('Repeticao')
+// vintetres.appendChild(ppVinteTres).appendChild(ppVinteTresNome)
+//(24) Dentro da div com o id 'resultado', escreva 2x ('Repetição')
+const vinteQuatro = document.querySelector('.vinteQuatro p')
+const palavra = 'Repetição'
+const  nnn = 2
+for(var i = 0; i < nnn; i++){
+   vinteQuatro.innerHTML += `${palavra} <br>` 
+}
+//(25) Dentro da div com o id 'resultado', escreva 20x ('Repetição'). (use o 'for' pelo amor de deus)
+const vinteCinco = document.querySelector('.vinteCinco p')
+const palavraCinco = 'Repetição'
+const  nnnCinco = 20
+for(var i = 0; i < nnnCinco; i++){
+   vinteCinco.innerHTML += `${palavraCinco} <br>` 
+}
+//(26) Dentro da div com o id 'resultado', escreva 5x ('Repetição'). (agora com forEach)
+const vinteSeis = document.querySelectorAll('.vinteSeis p')
+const resForeach = 'Repetição';
+vinteSeis.forEach(function(item){
+   item.innerHTML = resForeach
+})
+//(27 e 28) Dentro da div com o id 'resultado', escreva 5x ('Repetição'). (agora com while)
+let o = 0;
+const nnnnn = 5;
+    while( o < 5){       
+    console.log(palavra)
+    o++
+    }
+//(29) Dentro da div com o id 'resultado', escreva os números de 0 ~ 10 (escolha uma das opções acima)
+var i = 0;
+while(i < 10) {
+  console.log(i);
+  i++
+}
+//(30) Dentro da div com o id 'resultado', escreva os números pares até 20... (ex 2,4,6...20)
