@@ -184,8 +184,37 @@ const nnnnn = 5;
     }
 //(29) Dentro da div com o id 'resultado', escreva os números de 0 ~ 10 (escolha uma das opções acima)
 var i = 0;
-while(i < 10) {
+while(i <=20) {
   console.log(i);
   i++
 }
 //(30) Dentro da div com o id 'resultado', escreva os números pares até 20... (ex 2,4,6...20)
+let numeroTrinta = document.querySelector('.trinta')
+const fresco = [1,2,3,4,5,6,7,8,9,10]
+function paresS(fresco){
+    return (fresco % 2 === 0);
+}
+const totalN =  fresco.filter(paresS)
+numeroTrinta.innerHTML = totalN
+//(31) Ok... chega de for(), mentira / #SQN... Exiba a tabuada do 1 até o 10 (for dentro de for?) (caso você escreva de forma manual.. eu vou te bater HSUAHASHUAS)
+let nCalc = 10
+let fixo = 2
+const trintaUm = document.querySelector('.trintaUm')
+    for(let i = 1;i <= nCalc; i++){
+        trintaUm.innerHTML +=  fixo + 'x ' + i + '='+ (fixo * i) + '<br>'
+    } 
+//(32) Crie uma função que informa se tem os caracteres 'dota' no parâmetro informado.
+const inputTd = document.querySelector('#trintaDois')
+const resTrintaDois = document.querySelector('#resTrintaDois')
+inputTd.addEventListener('change', ()=> {
+    const inputTrintaDois = document.querySelector('#trintaDois').value
+    inputTrintaDois === 'dota' ? resTrintaDois.innerHTML = 'Dota é Verdadeiro' : resTrintaDois.innerHTML ='Falso é Dota'  
+})
+//(33) Exiba aleatoriamente um número pelo alert()
+const trintaTres = document.querySelector('#trintaTres')
+const resTrintaTres = document.querySelector('#resTrintaTres')
+const resRandom = Math.random()
+trintaTres.addEventListener('click', ()=>{   
+    resTrintaTres.innerText = ' '
+    resTrintaTres.innerText = resRandom.toFixed(2)
+})
