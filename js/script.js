@@ -167,7 +167,7 @@ const vinteCinco = document.querySelector('.vinteCinco p')
 const palavraCinco = 'Repetição'
 const  nnnCinco = 20
 for(var i = 0; i < nnnCinco; i++){
-   vinteCinco.innerHTML += `${palavraCinco} <br>` 
+   vinteCinco.appendChild += `${palavraCinco} <br>` 
 }
 //(26) Dentro da div com o id 'resultado', escreva 5x ('Repetição'). (agora com forEach)
 const vinteSeis = document.querySelectorAll('.vinteSeis p')
@@ -212,9 +212,64 @@ inputTd.addEventListener('change', ()=> {
 })
 //(33) Exiba aleatoriamente um número pelo alert()
 const trintaTres = document.querySelector('#trintaTres')
-const resTrintaTres = document.querySelector('#resTrintaTres')
-const resRandom = Math.random()
+const resTrintaTres = document.querySelector('#resTrintaTres span')
+const resRandom = Math.random() * 100
 trintaTres.addEventListener('click', ()=>{   
     resTrintaTres.innerText = ' '
-    resTrintaTres.innerText = resRandom.toFixed(2)
+    resTrintaTres.innerText = resRandom.toFixed(0)
 })
+//(34) Agora faça um botão que ao clicar nele informa se a pessoa acertou o número.
+const resTrintaQuatro = Math.random().toFixed(0) * 10
+const btnTrintaQuatro = document.querySelector('#btnTrintaQuatro')
+btnTrintaQuatro.addEventListener('click', ()=> {    
+    const inputTrintaQuatro = +document.querySelector('#trintaQuatro').value
+    console.log(resTrintaQuatro, inputTrintaQuatro)  
+    inputTrintaQuatro == resTrintaQuatro ? alert('Acertou') : alert('Errou')
+})
+//(35) Exiba a data atual pelo JavaScript no seguinte formato: dia/mês/Ano
+const dataHoje = new Date().toLocaleDateString()
+const trintaCinco = document.querySelector('.trintaCinco').innerHTML =  '<br>' + dataHoje
+//(36) Exiba o próximo mês (dinamicamente obviamente)
+const proxMes = new Date().getMonth()
+if(proxMes + 2 > 12){
+   console.log(proxMes - 10 )
+}
+console.log(proxMes + 1)
+//(37.a) Crie o seguinte array: var deuses = ['Aegir', 'Aud', 'Balder']
+//E Exiba a quantidade/comprimento que ele tem com a função .length
+const deuses = ['Aegir', 'Aud', 'Balder']
+console.log(deuses.length)
+//(37.b) Crie o seguinte array: var deuses = ['Aegir', 'Aud', 'Balder']
+//E exiba um a um com alert() - De preferencia para laços de repetição (for, forEach, while, do{}while)
+deuses.forEach((item) => {
+    console.log(item)
+})
+//(37.c) Crie o seguinte array: var deuses = ['Aegir', 'Aud', 'Balder']
+//E exiba um a um com alert() - De preferencia para funções com callbacks, Ex:(map, reduce, filter)
+const resdeuses = deuses.map((e) => {
+    console.log(e + 'i')
+})
+//(37.e) Crie o seguinte array: var deuses = ['Aegir', 'Aud', 'Balder']
+//Adicione os 3 Deuses: ('Loki', 'Odin', 'Frey') com a função push()
+deuses.push('Loki', 'Odin', 'Frey')
+deuses.forEach((item, index) => {
+    console.log(index, item)
+})
+//(37.g) Crie o seguinte array: var numbers = [5, 7, 1, 8, 9]
+//E exiba de forma crescente @dica: .sort
+const numbers = [5, 7, 1, 8, 9]
+console.log(numbers.sort())
+//(37.h) Crie o seguinte array: var numbers = [5, 7, 1, 8, 9]
+//E exiba de forma decrescente.
+console.log(numbers.reverse())
+//(38) Crie o seguinte array: var deuses = ['Aegir', 'Aud', 'Balder', 'Bragi', 'Búri', 'Dag', 'Dellingr']
+//E exiba todos os nomes, dentro do html: <ul id="nomes"></ul>
+const deusesOito = ['Aegir', 'Aud', 'Balder', 'Bragi', 'Búri', 'Dag', 'Dellingr']
+const trintaOito = document.querySelector('#trintaOito')
+const trintaOitoLi = document.createElement('li')
+console.log(trintaOito,trintaOitoLi)
+const resOito = deusesOito.map((e) => {
+    trintaOitoLi.innerHTML += `<li>${e}</li>`
+    trintaOito.innerHTML = trintaOitoLi.innerHTML
+})
+//(39) Crie um campo texto no html que armazena o conteúdo em um array sempre que você clicar no botão, e apresente em uma lista(ul)
